@@ -13,6 +13,15 @@ public class ResponseProduct {
     @SerializedName("data")
     private List<EntityProduct> data;
 
+    public ResponseProduct() {
+    }
+
+    public ResponseProduct(int statusCode, String pesan, List<EntityProduct> data) {
+        this.statusCode = statusCode;
+        this.pesan = pesan;
+        this.data = data;
+    }
+
     public int getStatusCode() {
         return statusCode;
     }
